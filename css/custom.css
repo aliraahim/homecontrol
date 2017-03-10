@@ -1,0 +1,12 @@
+.exp{
+    background-color:black;
+    text-align:center;
+}
+
+.exp .container {
+    margin-top:100px;
+}
+
+.inactive{
+    display:none;
+}
