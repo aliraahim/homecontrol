@@ -10,7 +10,17 @@ foreach($states_data as $state)
 }
 
 if (isset($_GET['switch1'])){
-    $states[0] = $_GET['switch1'];
+    $command =  $_GET['switch1'];
+    if ($command != "toggle"){
+        $states[0] = $_GET['switch1'];
+    }
+    elseif ($command == "toggle") {
+        if ($states[0] == "on"){
+            $states[0] = "off";
+        } else {
+            $states[0] = "on";
+        }
+    }
     // $states[0] = $_GET['switch1'] . PHP_EOL;
 }
 
@@ -24,6 +34,8 @@ if (isset($_GET['message'])){
     }
     // $states[0] = $_GET['switch1'] . PHP_EOL;
 }
+
+
 
 $file = fopen($filename, 'w');
 
