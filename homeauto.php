@@ -11,10 +11,10 @@ foreach($states_data as $state)
 
 if (isset($_GET['switch1'])){
     $command =  $_GET['switch1'];
-    if ($command != "toggle"){
+    if (stripos($command, 'toggle') === false){
         $states[0] = $_GET['switch1'];
     }
-    elseif ($command == "toggle") {
+    elseif (stripos($command, 'toggle') !== false) {
         if ($states[0] == "on"){
             $states[0] = "off";
         } else {
