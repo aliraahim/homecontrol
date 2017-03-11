@@ -6,23 +6,18 @@ $states = array();
 $states_data=file($filename);
 foreach($states_data as $state)
 {
-    var_dump($state);
     $states[] = $state;
 }
 
 if (isset($_GET['switch1'])){
     $command =  $_GET['switch1'];
-    echo 'Command is ' . $command;
-    if (stripos($command, 'toggle') === false){
-        echo 'Received on/off command';
+    if ($command != 'toggle'){
         $states[0] = $_GET['switch1'];
     }
-    elseif (stripos($command, 'toggle') !== false) {
+    elseif ($command == 'toggle') {
         if ($states[0] == "on"){
-            echo 'Toggling to off';
             $states[0] = "off";
         } else {
-            echo 'Toggling to on';
             $states[0] = "on";
         }
     }
@@ -44,7 +39,6 @@ if (isset($_GET['message'])){
 $file = fopen($filename, 'w');
 
 foreach ($states as $index => $state){
-    var_dump($state);
     fwrite($file, $state);
 }
 fclose($file);
