@@ -12,11 +12,11 @@ foreach($states_data as $state)
 if (isset($_GET['switch1'])){
     $command =  $_GET['switch1'];
     echo 'Command is ' . $command;
-    if (stripos($command, 'toggle') === false){
+    if (stripos($command, 'toggles') === false){
         echo 'Received on/off command';
         $states[0] = $_GET['switch1'];
     }
-    elseif (stripos($command, 'toggle') !== false) {
+    elseif (stripos($command, 'toggles') !== false) {
         if ($states[0] == "on"){
             echo 'Toggling to off';
             $states[0] = "off";
