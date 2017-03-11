@@ -26,7 +26,6 @@ if (isset($_GET['switch1'])){
             $states[0] = "on";
         }
     }
-    // $states[0] = $_GET['switch1'] . PHP_EOL;
 }
 
 if (isset($_GET['message'])){
