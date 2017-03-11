@@ -6,7 +6,7 @@ $states = array();
 $states_data=file($filename);
 foreach($states_data as $state)
 {
-    echo $state;
+    var_dump($state);
     $states[] = $state;
 }
 
@@ -45,7 +45,7 @@ if (isset($_GET['message'])){
 $file = fopen($filename, 'w');
 
 foreach ($states as $index => $state){
-    echo $state;
+    var_dump($state);
     fwrite($file, $state);
 }
 fclose($file);
