@@ -23,7 +23,7 @@ foreach($health_data as $health_point)
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Home Automation</title>
     <!-- Bootstrap -->
-    <link rel="shortcut icon" href="" type="image/png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <?php include ('stylesheets.php'); ?>
 </head>
 <body class = "exp">
@@ -43,7 +43,7 @@ foreach($health_data as $health_point)
             }} else {
                 echo '<h1 style = "font-size: 7em;">&#9785;</h1>';
                 echo '<h2>Chotu is not working!</h2>';
-                echo '<a href ="/">Check again</a>';
+                echo '<a href =".">Check again</a>';
             }
             ?>
   </div>
