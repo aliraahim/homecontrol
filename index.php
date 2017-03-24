@@ -43,7 +43,7 @@ foreach($health_data as $health_point)
             }} else {
                 echo '<h1 style = "font-size: 7em;">&#9785;</h1>';
                 echo '<h2>Chotu is not working!</h2>';
-                echo '<a href ="index.php">Check again</a>';
+                echo '<a href ="/">Check again</a>';
             }
             ?>
   </div>
