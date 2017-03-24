@@ -23,7 +23,7 @@ foreach($health_data as $health_point)
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Home Automation</title>
     <!-- Bootstrap -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon">
     <?php include ('stylesheets.php'); ?>
 </head>
 <body class = "exp">
