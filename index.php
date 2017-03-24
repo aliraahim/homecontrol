@@ -6,6 +6,13 @@ foreach($states_data as $state)
 {
    $states[] = trim($state);
 }
+$filename = 'health.txt';
+$health = array();
+$health_data=file($filename);
+foreach($health_data as $health_point)
+{
+   $health[] = trim($health_point);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,14 +32,20 @@ foreach($states_data as $state)
     <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <div class = "switch" id = "switch1" value=<?php echo $states[0]?>>
-            <?php if ($states[0] == "on") {
+        <?php if (time() - $health[0] < 20){
+            echo '<div class = "switch" id = "switch1" value='.$states[0].'>';
+            if ($states[0] == "on") {
                 echo'<img class = "toggle active" src = "assets/bulb-on.jpg" width = "300px" value = "on"/>';
                 echo'<img class = "toggle inactive" src = "assets/bulb-off.jpg" width = "300px" value = "off"/>';
             } elseif ($states[0] == "off") {
                 echo'<img class = "toggle inactive" src = "assets/bulb-on.jpg" width = "300px" value = "on"/>';
                 echo'<img class = "toggle active" src = "assets/bulb-off.jpg" width = "300px" value = "off"/>';
-            }?>
+            }} else {
+                echo '<h1 style = "font-size: 7em;">&#9785;</h1>';
+                echo '<h2>Chotu is not working!</h2>';
+                echo '<a href ="index.php">Check again</a>';
+            }
+            ?>
   </div>
         </div>
     </div>
