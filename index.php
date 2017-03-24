@@ -27,8 +27,6 @@ foreach($health_data as $health_point)
     <?php include ('stylesheets.php'); ?>
 </head>
 <body class = "exp">
-    <header>
-    </header>
     <div class="container">
     <div class="row">
         <div class="col-xs-12">
