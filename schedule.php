@@ -18,10 +18,10 @@ foreach($schedules_data as $schedule)
 
 if (($schedules[0]['time'] <= time()) &&  (time() - $schedules[0]['time'] < $lookBackTime)){
     if ($schedules[0]['new_status'] == 'on'){
-        $url = 'localhost/HomeAuto/homeauto.php?switch1=on';
+        $url = 'http://custom-env.kcdbpksuwd.us-west-2.elasticbeanstalk.com/homeauto.php?switch1=on';
         makeCurl($url);
     } elseif ($schedules[0]['new_status'] == 'off'){
-        $url = 'localhost/HomeAuto/homeauto.php?switch1=off';
+        $url = 'http://custom-env.kcdbpksuwd.us-west-2.elasticbeanstalk.com/homeauto.php?switch1=off';
         makeCurl($url);
     }
 }
