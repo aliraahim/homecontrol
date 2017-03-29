@@ -37,7 +37,7 @@ foreach($new_states_data as $new_state)
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-            <?php if (time() - $health[0] < 200000000){
+            <?php if (time() - $health[0] < 20){
                 echo '<div class = "switch" id = "switch1" value='.$states[0].'>';
                 if ($states[0] == "on") {
                     echo'<img class = "toggle active" src = "assets/bulb-on.jpg" width = "300px" value = "on"/>';

@@ -5,7 +5,7 @@
 
 // fclose($file);
 
-$lookBackTime = 30000000;
+$lookBackTime = 30;
 $filename = 'schedule.txt';
 $schedules = array();
 
@@ -16,7 +16,7 @@ foreach($schedules_data as $schedule)
     $schedules[] = array('time' => $temp[0],'new_status' => $temp[1]);
 }
 
-if (($schedules[0]['time'] < time()) &&  (time() - $schedules[0]['time'] < $lookBackTime)){
+if (($schedules[0]['time'] <= time()) &&  (time() - $schedules[0]['time'] < $lookBackTime)){
     if ($schedules[0]['new_status'] == 'on'){
         $url = 'localhost/HomeAuto/homeauto.php?switch1=on';
         makeCurl($url);
