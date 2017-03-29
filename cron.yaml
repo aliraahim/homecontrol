@@ -1,5 +1,5 @@
 version: 1
 cron:
- — name: "schedule"
-   url: "/schedule.php"
-   schedule: "* * * * *"
+  - name: "schedule"
+    url: "/schedule.php"
+    schedule: "* * * * *"
