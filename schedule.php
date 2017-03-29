@@ -1,9 +1,9 @@
 <?php
-// $file = fopen("test.txt", 'a');
+$file = fopen("test.txt", 'a');
+$line = time() . '\n';
+fwrite($file, $line);
 
-// fwrite($file, "Hello\n");
-
-// fclose($file);
+fclose($file);
 
 $lookBackTime = 30;
 $filename = 'schedule.txt';
@@ -16,7 +16,7 @@ foreach($schedules_data as $schedule)
     $schedules[] = array('time' => $temp[0],'new_status' => $temp[1]);
 }
 
-if (($schedules[0]['time'] <= time()) &&  (time() - $schedules[0]['time'] < $lookBackTime)){
+if (($schedules[0]['time'] <= time() + 5) &&  (time() - $schedules[0]['time'] < $lookBackTime)){
     if ($schedules[0]['new_status'] == 'on'){
         $url = 'http://custom-env.kcdbpksuwd.us-west-2.elasticbeanstalk.com/homeauto.php?switch1=on';
         makeCurl($url);

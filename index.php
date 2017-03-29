@@ -66,7 +66,7 @@ foreach($new_states_data as $new_state)
                         <option value="on">on</option>
                     </select>
                     <label class="" for="number">after</label>
-                    <input type="number" class="form-control" name="number" id = "inlineFormInput" min="2" max="2000" placeholder="5" required>
+                    <input type="number" class="form-control" name="number" id = "inlineFormInput" min="1" max="2000" placeholder="5" required>
                     <select class="selectpicker" name = "units" id="inlineFormCustomSelect" data-width="auto">
                         <option value="minutes">minutes</option>
                         <option value="hours">hours</option>
