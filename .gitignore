@@ -5,3 +5,5 @@
 !.elasticbeanstalk/*.global.yml
 venv/
 state.txt
+health.txt
+schedule.txt
