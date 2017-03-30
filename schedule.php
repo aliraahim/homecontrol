@@ -6,6 +6,7 @@ fwrite($file, $line);
 fclose($file);
 
 $lookBackTime = 30;
+$timeMargin = 5;
 $filename = 'schedule.txt';
 $schedules = array();
 
@@ -16,7 +17,8 @@ foreach($schedules_data as $schedule)
     $schedules[] = array('time' => $temp[0],'new_status' => $temp[1]);
 }
 
-if (($schedules[0]['time'] <= time() + 5) &&  (time() - $schedules[0]['time'] < $lookBackTime)){
+// if (($schedules[0]['time'] <= time() + 5) &&  (time() - $schedules[0]['time'] < $lookBackTime)){
+if (abs($schedules[0]['time'] - time()) <= $timeMargin) {
     if ($schedules[0]['new_status'] == 'on'){
         $url = 'http://custom-env.kcdbpksuwd.us-west-2.elasticbeanstalk.com/homeauto.php?switch1=on';
         makeCurl($url);
