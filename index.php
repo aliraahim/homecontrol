@@ -1,19 +1,21 @@
 <?php
-$filename = 'state.txt';
+$debug=true;
+$filename = 'gs://simplehomecontrolauto.appspot.com/state.txt';
 $states = array();
 $states_data=file($filename);
 foreach($states_data as $state)
 {
    $states[] = trim($state);
 }
-$filename = 'health.txt';
+$filename = 'gs://simplehomecontrolauto.appspot.com/health.txt';
 $health = array();
 $health_data=file($filename);
 foreach($health_data as $health_point)
 {
    $health[] = trim($health_point);
 }
-$filename = 'schedule.txt';
+
+$filename = 'gs://simplehomecontrolauto.appspot.com/schedule.txt';
 $new_states = array();
 $new_states_data=file($filename);
 foreach($new_states_data as $new_state)
@@ -30,14 +32,14 @@ foreach($new_states_data as $new_state)
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Home Automation</title>
     <!-- Bootstrap -->
-    <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico?v=1" type="image/x-icon">
     <?php include ('stylesheets.php'); ?>
 </head>
 <body class = "exp">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-            <?php if (time() - $health[0] < 20){
+            <?php if ((time() - $health[0] < 20) || (debug)){
                 echo '<div class = "switch" id = "switch1" value='.$states[0].'>';
                 if ($states[0] == "on") {
                     echo'<img class = "toggle active" src = "assets/bulb-on.jpg" width = "300px" value = "on"/>';

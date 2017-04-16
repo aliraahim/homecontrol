@@ -1,5 +1,5 @@
 <?php
-$filename = 'state.txt';
+$filename = 'gs://simplehomecontrolauto.appspot.com/state.txt';
 $states = array();
 $states_data=file($filename);
 foreach($states_data as $state)

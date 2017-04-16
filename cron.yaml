@@ -1,0 +1,4 @@
+cron:
+- description: timed state toggle
+  url: /schedule.php
+  schedule: every 1 mins

@@ -1,6 +1,7 @@
 <?php
 
 $filename = 'health.txt';
+$filename = 'gs://simplehomecontrolauto.appspot.com/health.txt';
 $health = array();
 
 $health_data=file($filename);

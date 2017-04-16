@@ -1,5 +1,6 @@
 <?php
-$filename = 'schedule.txt';
+//writes the schedule file with timestamp provided by user
+$filename = 'gs://simplehomecontrolauto.appspot.com/schedule.txt';
 $new_states = array();
 
 $new_states_data=file($filename);
