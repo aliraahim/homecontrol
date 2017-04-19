@@ -39,33 +39,43 @@ foreach($new_states_data as $new_state)
 <body class = "">
     <div class="container">
     <div class="row">
-        <div class="col-xs-6 col-sm-offset-2 col-sm-4">
-         <div class="card">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="http://materializecss.com/images/office.jpg">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-    </div>
+        <div class="col-xs-6 col-lg-offset-2 col-lg-4">
+      <div class="card">
+        <div class="card-image">
+          <!--<img src="http://materializecss.com/images/sample-1.jpg">-->
+          <?php if ((time() - $health[0] < 20) || (debug)){
+                echo '<div class = "switch" id = "switch1" value='.$states[0].'>';
+                if ($states[0] == "on") {
+                    echo'<img class = "toggle active" src = "assets/bulb-on.jpg" style="width:50%" value = "on"/>';
+                    echo'<img class = "toggle inactive" src = "assets/bulb-off.jpg" style="width:50%" value = "off"/></div>';
+                } elseif ($states[0] == "off") {
+                    echo'<img class = "toggle inactive" src = "assets/bulb-on.jpg" width = "300px" value = "on"/>';
+                    echo'<img class = "toggle active" src = "assets/bulb-off.jpg" width = "300px" value = "off"/></div>';
+                }} else {
+                    echo '<h1 style = "font-size: 7em;">&#9785;</h1>';
+                    echo '<h2>Chotu is not working!</h2>';
+                    echo '<a href =".">Check again</a>';
+                }
+                ?>
+        </div>
+        <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Switch state</span>
+          <p>Tap to toggle.</p>
+        </div>
   </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-lg-4">
             <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="http://materializecss.com/images/office.jpg">
+      <img class="activator" style="width:75%" src="http://3.bp.blogspot.com/-ZAcbB0Nm-s0/V6R9zUIPZkI/AAAAAAAA5w8/K-Ej-SJ-wC8zLDFiTHrVZyB2aqr5I_VGACK4B/s1600/settings%2Bicon%2BN%2Bdark.png">
     </div>
     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
+      <span class="card-title activator grey-text text-darken-4">Settings</span>
+      <p>Tap to display settings.</p>
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      <span class="card-title grey-text text-darken-4">Settings<i class="material-icons right">close</i></span>
+      <p>Here you can configure settings.</p>
     </div>
   </div>
         </div>
