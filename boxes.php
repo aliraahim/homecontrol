@@ -59,8 +59,8 @@ foreach($new_states_data as $new_state)
                 ?>
         </div>
         <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">Switch state</span>
-          <p>Tap to toggle.</p>
+        <!--<span class="card-title activator grey-text text-darken-4">Switch state</span>-->
+          <p>Tap to turn on/off.</p>
         </div>
   </div>
         </div>
@@ -74,6 +74,7 @@ foreach($new_states_data as $new_state)
       <p>Tap to display settings.</p>
     </div>
     <div class="card-reveal">
+    <!--<p><i class="material-icons right">close</i></p>-->
       <span class="card-title grey-text text-darken-4">Settings<i class="material-icons right">close</i></span>
       <p>Here you can configure settings.</p>
     </div>
