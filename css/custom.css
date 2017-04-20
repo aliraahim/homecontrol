@@ -70,5 +70,46 @@ i.right {
     margin-left: 0px !important;
 }
 
+.mycard {
+    padding:0 5px !important;
+}
 
+.container {
+    padding-left:0px !important;
+    padding-right:0px !important;
+}
 
+.cards {
+    background-color:#f9f9f9;
+}
+
+.card {
+    margin-bottom:0px !important;
+}
+
+.toprow {
+    margin-bottom:3px !important;
+}
+
+.timertext {
+    text-align:center;
+    margin: 25px;
+    font-size: 1.5em;
+    color: lightgrey;
+}
+
+.timerform {
+    text-align:center;
+}
+
+.timerform label {
+    font-size:1.2em !important;
+    vertical-align: -webkit-baseline-middle !important;
+    font-weight:400;
+}
+
+input[type=number]{
+    font-size:1.2em;
+    margin: 0px;
+    padding:0px 0px 0px 10px;
+}
