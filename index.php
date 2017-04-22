@@ -107,7 +107,7 @@ foreach($new_states_data as $new_state)
                 ?>
 
                 <span class ="healthInfo">Status: <span class ="health"></span><i class="fa fa-refresh healthCheckButton"></i></span>
-                <a href = "#" class = "timerView"><span class =" timerInfo"></span></a>
+                <span class =" timerInfo"></span>
             </div>
         </div>
         <!--<div class="col-xs-6 col-lg-4 mycard">-->
@@ -236,7 +236,7 @@ foreach($new_states_data as $new_state)
             .done(function(data) {
                 // log data to the console so we can see
                 if (data.timerSet == true){
-                    $('.timerInfo').text('Timer is active!');
+                    $('.timerInfo').text('Timer: Active');
                 } else {
                     $('.timerInfo').text('');
                 }
