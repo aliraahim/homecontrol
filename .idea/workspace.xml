@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfefc2b3-6dce-4ee7-b1d3-8f2fbe1b6925" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boxes.php" afterPath="$PROJECT_DIR$/boxes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/new.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/settings.png" afterPath="$PROJECT_DIR$/assets/settings.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/custom.css" afterPath="$PROJECT_DIR$/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascript.php" afterPath="$PROJECT_DIR$/javascript.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheets.php" afterPath="$PROJECT_DIR$/stylesheets.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +19,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="boxes.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="boxes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/boxes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="84" column="13" lean-forward="false" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+            <state relative-caret-position="415">
+              <caret line="106" column="23" lean-forward="true" selection-start-line="89" selection-start-column="6" selection-end-line="106" selection-end-column="23" />
               <folding>
                 <marker date="1492853066000" expanded="true" signature="1945:1956" ph="..." />
                 <marker date="1492853066000" expanded="true" signature="2070:2081" ph="..." />
@@ -38,7 +42,67 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="new.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="455">
+              <caret line="68" column="78" lean-forward="false" selection-start-line="68" selection-start-column="78" selection-end-line="68" selection-end-column="78" />
+              <folding>
+                <element signature="e#1292#1299#1#HTML" expanded="true" />
+                <marker date="1492862103000" expanded="true" signature="3438:3449" ph="..." />
+                <marker date="1492862103000" expanded="true" signature="3567:3578" ph="..." />
+                <marker date="1492862103000" expanded="true" signature="3755:3766" ph="..." />
+                <marker date="1492862103000" expanded="true" signature="3882:3893" ph="..." />
+                <marker date="1492862103000" expanded="true" signature="3988:4003" ph="..." />
+                <marker date="1492862103000" expanded="true" signature="4005:4012" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="javascript.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stylesheets.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stylesheets.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/custom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="186" column="22" lean-forward="false" selection-start-line="186" selection-start-column="22" selection-end-line="186" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>switch</find>
+      <find>mycard</find>
+      <find>.container</find>
+      <find>card</find>
+      <find>.toprow</find>
+      <find>toprow</find>
+      <find>settings</find>
+      <find>cards</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,6 +111,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/boxes.php" />
+        <option value="$PROJECT_DIR$/stylesheets.php" />
+        <option value="$PROJECT_DIR$/javascript.php" />
+        <option value="$PROJECT_DIR$/new.php" />
+        <option value="$PROJECT_DIR$/css/custom.css" />
       </list>
     </option>
   </component>
@@ -58,9 +126,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="709" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -91,6 +158,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HomeAuto-GC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HomeAuto-GC" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -98,6 +179,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -111,6 +193,69 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
@@ -121,15 +266,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1492849473285</updated>
-      <workItem from="1492849475795" duration="992000" />
+      <workItem from="1492849475795" duration="6072000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="992000" />
+    <option name="totallyTimeSpent" value="6072000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="709" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24609375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -164,8 +309,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/boxes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="84" column="13" lean-forward="false" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+        <state relative-caret-position="415">
+          <caret line="106" column="23" lean-forward="true" selection-start-line="89" selection-start-column="6" selection-end-line="106" selection-end-column="23" />
           <folding>
             <marker date="1492853066000" expanded="true" signature="1945:1956" ph="..." />
             <marker date="1492853066000" expanded="true" signature="2070:2081" ph="..." />
@@ -180,6 +325,46 @@
             <marker date="1492853066000" expanded="true" signature="6031:6046" ph="..." />
             <marker date="1492853066000" expanded="true" signature="6048:6055" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stylesheets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="68" column="78" lean-forward="false" selection-start-line="68" selection-start-column="78" selection-end-line="68" selection-end-column="78" />
+          <folding>
+            <element signature="e#1292#1299#1#HTML" expanded="true" />
+            <marker date="1492862103000" expanded="true" signature="3438:3449" ph="..." />
+            <marker date="1492862103000" expanded="true" signature="3567:3578" ph="..." />
+            <marker date="1492862103000" expanded="true" signature="3755:3766" ph="..." />
+            <marker date="1492862103000" expanded="true" signature="3882:3893" ph="..." />
+            <marker date="1492862103000" expanded="true" signature="3988:4003" ph="..." />
+            <marker date="1492862103000" expanded="true" signature="4005:4012" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="186" column="22" lean-forward="false" selection-start-line="186" selection-start-column="22" selection-end-line="186" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
