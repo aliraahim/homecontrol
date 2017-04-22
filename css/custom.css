@@ -257,3 +257,14 @@ i.checking {
 .timerCard, .settingsCard {
     background-color:gainsboro;
 }
+
+.settingsLabel {
+    color: white;
+    font-size: 30px;
+    text-align:left;
+    margin-bottom:10px;
+}
+
+.settingsInput{
+    text-align:right;
+}

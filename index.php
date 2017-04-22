@@ -67,6 +67,33 @@ foreach($states_data as $state)
     </div>
 
 </div>
+<div id="settings" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeSettings()">&times;</a>
+
+    <!-- Overlay content -->
+    <div class="overlay-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-9 col-sm-offset-3 col-sm-4 settingsLabel">
+                    <span>Google Home Integration</span>
+                </div>
+                <div class="col-xs-3 col-sm-2 settingsInput">
+                    <input type="checkbox" id = "googleHome" checked data-toggle="toggle" data-onstyle="primary" data-size="large">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-9 col-sm-offset-3 col-sm-4 settingsLabel">
+                    <span>SMS Integration</span>
+                </div>
+                <div class="col-xs-3 col-sm-2 settingsInput">
+                    <input type="checkbox" id = "SMS" checked data-toggle="toggle" data-onstyle="primary" data-size="large">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class ="row">
         <div class ="col-sm-12">
@@ -155,6 +182,14 @@ foreach($states_data as $state)
     });
 </script>
 <script>
+    $(function() {
+        $('#googleHome').change(function() {
+        })
+        $('#SMS').change(function() {
+        })
+    })
+</script>
+<script>
     window.setInterval(function(){
         checkState();
     }, 5000);
@@ -194,6 +229,15 @@ foreach($states_data as $state)
         document.getElementById("timer").style.width = "0%";
         timerButtonRestore();
         checkTimer();
+    }
+
+    function openSettings() {
+        document.getElementById("settings").style.width = "100%";
+    }
+
+    /* Close when someone clicks on the "x" symbol inside the overlay */
+    function closeSettings() {
+        document.getElementById("settings").style.width = "0%";
     }
 
     function checkHealth() {
