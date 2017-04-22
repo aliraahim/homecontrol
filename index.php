@@ -7,21 +7,6 @@ foreach($states_data as $state)
 {
     $states[] = trim($state);
 }
-$filename = 'gs://simplehomecontrolauto.appspot.com/health.txt';
-$health = array();
-$health_data=file($filename);
-foreach($health_data as $health_point)
-{
-    $health[] = trim($health_point);
-}
-
-$filename = 'gs://simplehomecontrolauto.appspot.com/schedule.txt';
-$new_states = array();
-$new_states_data=file($filename);
-foreach($new_states_data as $new_state)
-{
-    $new_states[] = $new_state;
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +15,7 @@ foreach($new_states_data as $new_state)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Home Automation</title>
+    <title>Simple Home Control</title>
     <!-- Bootstrap -->
     <link rel="shortcut icon" href="favicon.ico?v=1" type="image/x-icon">
     <?php include ('stylesheets.php'); ?>
@@ -170,6 +155,9 @@ foreach($new_states_data as $new_state)
     });
 </script>
 <script>
+    window.setInterval(function(){
+        checkState();
+    }, 5000);
     var timerData = null;
 
     function timerButtonRestore() {
@@ -247,12 +235,37 @@ foreach($new_states_data as $new_state)
             .done(function(data) {
                 // log data to the console so we can see
                 if (data.timerSet == true){
-                    $('.timerInfo').text('Time active');
+                    $('.timerInfo').text('Timer active');
                 } else {
                     $('.timerInfo').text('');
                 }
                 timerData = data;
                 // here we will handle errors and validation messages
+            });
+    }
+
+    function checkState() {
+        $.ajax({
+            type        : 'GET', // define the type of HTTP verb we want to use (POST for our form)
+            url         : 'checkState.php', // the url where we want to POST
+            dataType    : 'json', // what type of data do we expect back from the server
+            encode          : true
+        })
+        // using the done promise callback
+            .done(function(data) {
+                // log data to the console so we can see
+                if (data.state == 'on'){
+//                    $('.health').text('Online');
+                    $("img[value='on']").addClass('active');
+                    $("img[value='on']").removeClass('inactive');
+                    $("img[value='off']").addClass('inactive');
+                    $("img[value='off']").removeClass('active');
+                } else {
+                    $("img[value='on']").addClass('inactive');
+                    $("img[value='on']").removeClass('active');
+                    $("img[value='off']").addClass('active');
+                    $("img[value='off']").removeClass('inactive');
+                }
             });
     }
 
@@ -265,6 +278,7 @@ foreach($new_states_data as $new_state)
 
         $( ".healthCheckButton" ).click(function() {
             checkHealth();
+            checkState();
         });
 
         $( ".newTimer" ).click(function() {
@@ -339,13 +353,9 @@ foreach($new_states_data as $new_state)
                         $('.timer-btn').disabled = 'disabled';
                         $('.timer-btn').css('cursor','not-allowed');
                     } else {
-                        alert('Sadness');
+                        alert('Timer could not be set!');
                     }
-
-
-                    // here we will handle errors and validation messages
                 });
-
             // stop the form from submitting the normal way and refreshing the page
             event.preventDefault();
         });
