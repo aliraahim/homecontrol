@@ -179,7 +179,7 @@ i.right {
     font-size:36px;
 }
 
-#hours-mins {
+#number {
     font-size: 36px;
     padding-top: 25px;
     padding-bottom: 20px;
@@ -188,5 +188,6 @@ i.right {
 }
 
 .timer-btn {
-    font-size:36px;
+    font-size:30px;
+    background-color:#337ab7;
 }
