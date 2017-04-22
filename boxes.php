@@ -82,7 +82,7 @@ foreach($new_states_data as $new_state)
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Timer</span>
-      <p>Tap here to modify</p>
+      <p>Taps here to modify</p>
     </div>
     <div class="card-reveal timerform">
     <!--<p><i class="material-icons right">close</i></p>-->
