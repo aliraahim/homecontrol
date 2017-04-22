@@ -37,9 +37,6 @@ foreach($new_states_data as $new_state)
 
 </head>
 <body class = "cards">
-<br>
-<br>
-<br>
 <div id="timer" class="overlay">
 
     <!-- Button to close the overlay navigation -->
@@ -86,6 +83,14 @@ foreach($new_states_data as $new_state)
 
 </div>
 <div class="container">
+    <div class ="row">
+        <div class ="col-sm-12">
+            <div class = "logo">
+                <img src = "assets/logo.png">
+            </div>
+
+        </div>
+    </div>
     <div class="row toprow">
         <!--<div class="col-xs-6 col-lg-offset-2 col-lg-4 mycard">-->
         <!--http://shoelace.io/#830fe4793d41c811597b2576c0abfedf-->
@@ -106,8 +111,9 @@ foreach($new_states_data as $new_state)
                     }
                 ?>
 
-                <span class ="healthInfo">Status: <span class ="health"></span><i class="fa fa-refresh healthCheckButton"></i></span>
+                <span class ="healthInfo">Health:<span class ="health"></span><i class="fa fa-refresh healthCheckButton"></i></span>
                 <span class =" timerInfo"></span>
+                <span class ="guide"><img src = "assets/guide.png"></span>
             </div>
         </div>
         <!--<div class="col-xs-6 col-lg-4 mycard">-->
@@ -140,6 +146,11 @@ foreach($new_states_data as $new_state)
                 </div>
             </div>
 
+        </div>
+    </div>
+    <div class ="row">
+        <div class ="col-sm-12">
+            <p style ="text-align:center; color:white; ">Built by Raahim</p>
         </div>
     </div>
 </div>
@@ -206,7 +217,7 @@ foreach($new_states_data as $new_state)
             dataType    : 'json', // what type of data do we expect back from the server
             encode          : true,
             beforeSend : function(){
-                $('.health').text('Checking');
+                $('.health').html('<i class="fa fa-circle checking"></i>');
                 // do your stuff here
 
             }
@@ -215,9 +226,11 @@ foreach($new_states_data as $new_state)
             .done(function(data) {
                 // log data to the console so we can see
                 if (data.success == true){
-                    $('.health').text('Online');
+//                    $('.health').text('Online');
+                    $('.health').html('<i class="fa fa-circle online"></i>');
                 } else {
-                    $('.health').text('Offline');
+//                    $('.health').text('Offline');
+                    $('.health').html('<i class="fa fa-circle offline"></i>');
                 }
 
 
