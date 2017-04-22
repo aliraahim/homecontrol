@@ -5,7 +5,7 @@
  * Date: 4/22/17
  * Time: 6:46 PM
  */
-$timeMargin = 2000000000; //seconds
+$timeMargin = 20; //seconds
 $filename = 'gs://simplehomecontrolauto.appspot.com/health.txt';
 $health = array();
 $health_data=file($filename);

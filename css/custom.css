@@ -253,3 +253,7 @@ i.offline {
 i.checking {
     color:black;
 }
+
+.timerCard, .settingsCard {
+    background-color:gainsboro;
+}

@@ -121,7 +121,7 @@ foreach($new_states_data as $new_state)
     <div class="row">
         <!--<div class="col-xs-6 col-lg-offset-2 col-lg-4 mycard">-->
         <div class="col-xs-6 col-sm-offset-3 col-sm-3 cardColumn">
-            <div class ="card" onclick="openTimer()">
+            <div class ="card timerCard" onclick="openTimer()">
                 <div class ="cardImage">
                     <img src="assets/timer.png">
                 </div>
@@ -134,8 +134,7 @@ foreach($new_states_data as $new_state)
         </div>
         <!--<div class="col-xs-6 col-lg-4 mycard">-->
         <div class="col-xs-6 col-sm-3 cardColumn" style ="margin-bottom:30px">
-            <div class ="card" onclick="openSettings()">
-                <div class ="card" onclick="openSettings()">
+                <div class ="card settingsCard" onclick="openSettings()">
                     <div class ="cardImage">
                         <img src="assets/settings.png">
                     </div>
@@ -144,7 +143,6 @@ foreach($new_states_data as $new_state)
                         <p>Tap to modify.</p>
                     </div>
                 </div>
-            </div>
 
         </div>
     </div>
@@ -249,7 +247,7 @@ foreach($new_states_data as $new_state)
             .done(function(data) {
                 // log data to the console so we can see
                 if (data.timerSet == true){
-                    $('.timerInfo').text('Timer: Active');
+                    $('.timerInfo').text('Time active');
                 } else {
                     $('.timerInfo').text('');
                 }
