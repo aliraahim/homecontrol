@@ -180,7 +180,7 @@ i.right {
 }
 
 #number {
-    font-size: 36px;
+    font-size: 30px;
     padding-top: 25px;
     padding-bottom: 20px;
     margin-bottom: 6px;
@@ -190,4 +190,41 @@ i.right {
 .timer-btn {
     font-size:30px;
     background-color:#337ab7;
+}
+
+span.healthInfo{
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+}
+
+.healthInfo i {
+    font-size:16px;
+    margin-left:15px;
+}
+
+.healthCheckButton{
+    cursor: pointer;
+}
+
+body
+{
+    overflow-x: hidden;
+}
+
+span.timerInfo{
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+}
+
+.timerMessage {
+    color:white;
+    font-size:30px;
+}
+
+.timerButtons button {
+    font-size:30px;
+    margin-bottom:10px;
+    margin-top:20px;
 }
