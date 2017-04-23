@@ -182,14 +182,6 @@ foreach($states_data as $state)
     });
 </script>
 <script>
-    $(function() {
-        $('#googleHome').change(function() {
-        })
-        $('#SMS').change(function() {
-        })
-    })
-</script>
-<script>
     window.setInterval(function(){
         checkState();
     }, 5000);
@@ -232,6 +224,7 @@ foreach($states_data as $state)
     }
 
     function openSettings() {
+        checkSettings();
         document.getElementById("settings").style.width = "100%";
     }
 
@@ -313,12 +306,79 @@ foreach($states_data as $state)
             });
     }
 
+    function checkSettings() {
+        $.ajax({
+            type        : 'GET', // define the type of HTTP verb we want to use (POST for our form)
+            url         : 'checkSettings.php', // the url where we want to POST
+            dataType    : 'json', // what type of data do we expect back from the server
+            encode          : true
+        })
+        // using the done promise callback
+            .done(function(data) {
+                // log data to the console so we can see
+                if (data[0].split('-')[1] == 'on') {
+                    $('#googleHome').bootstrapToggle('on');
+                } else {
+                    $('#googleHome').bootstrapToggle('off');
+                }
+
+                if (data[1].split('-')[1] == 'on') {
+                    $('#SMS').bootstrapToggle('on');
+                } else {
+                    $('#SMS').bootstrapToggle('off');
+                }
+
+            });
+    }
+
 </script>
 <script>
     $(document).ready(function() {
 
         checkHealth();
         checkTimer();
+        checkSettings();
+
+        $("#googleHome").change(function() {
+            var setting;
+            if ($(this).prop('checked') == true){
+                setting = 'on';
+            } else {
+                setting = 'off';
+            }
+
+            var toggleValue = {
+                'googleHome'    : setting
+            };
+            $.ajax({
+                type        : 'GET', // define the type of HTTP verb we want to use (POST for our form)
+                url         : 'settings.php', // the url where we want to POST
+                data        : toggleValue,
+                dataType    : 'json', // what type of data do we expect back from the server
+                encode          : true
+            });
+        });
+        $("#SMS").change(function() {
+            var setting;
+            if ($(this).prop('checked') == true){
+                setting = 'on';
+            } else {
+                setting = 'off';
+            }
+
+            var toggleValue = {
+                'SMS'    : setting
+            };
+            $.ajax({
+                type        : 'GET', // define the type of HTTP verb we want to use (POST for our form)
+                url         : 'settings.php', // the url where we want to POST
+                data        : toggleValue,
+                dataType    : 'json', // what type of data do we expect back from the server
+                encode          : true
+            });
+        });
+
+
 
         $( ".healthCheckButton" ).click(function() {
             checkHealth();
@@ -403,7 +463,6 @@ foreach($states_data as $state)
             // stop the form from submitting the normal way and refreshing the page
             event.preventDefault();
         });
-
     });
 </script>
 

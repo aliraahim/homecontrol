@@ -24,4 +24,13 @@ foreach ($new_states as $index => $new_state){
 }
 fclose($file);
 
+$filename = 'gs://simplehomecontrolauto.appspot.com/settings.txt';
+$file = fopen($filename, 'w');
+$settings[0] = 'googleHome' . '-' . 'on';
+$settings[1] = 'SMS' . '-' . 'on';
+foreach ($settings as $index => $setting){
+    fwrite($file, $setting.PHP_EOL);
+}
+fclose($file);
+
 ?>
