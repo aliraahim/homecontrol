@@ -1,5 +1,27 @@
 <?php
 
+$filename = 'gs://simplehomecontrolauto.appspot.com/settings.txt';
+$settings = array();
+$settings_data=file($filename);
+foreach($settings_data as $index => $setting)
+{
+    $settings[$index] = trim($setting);
+}
+
+$googleHome = substr($settings[0], strpos($settings[0], "-") + 1);
+$sms = substr($settings[1], strpos($settings[1], "-") + 1);
+
+$takeAction = true;
+
+if (isset($_GET['client'])){
+    $client =  $_GET['client'];
+    if (($client == 'googleHome') && ($googleHome != 'on')){
+        $takeAction = false;
+    } elseif (($client == 'SMS') && ($sms != 'on')){
+        $takeAction = false;
+    }
+}
+
 $filename = 'gs://simplehomecontrolauto.appspot.com/state.txt';
 $states = array();
 
@@ -25,22 +47,25 @@ if (isset($_GET['switch1'])){
 
 if (isset($_GET['message'])){
     $message = $_GET['message'];
-    if ((stripos($message, 'Chotu') !== false) && (stripos($message, 'on') !== false) && (stripos($message, 'off') === false)){
+    if ((stripos($message, 'Jugnu') !== false) && (stripos($message, 'on') !== false) && (stripos($message, 'off') === false)){
         $states[0] = 'on';
     }
-    elseif ((stripos($message, 'Chotu') !== false) && (stripos($message, 'on') === false) && (stripos($message, 'off') !== false)){
+    elseif ((stripos($message, 'Jugnu') !== false) && (stripos($message, 'on') === false) && (stripos($message, 'off') !== false)){
         $states[0] = 'off';
     }
     // $states[0] = $_GET['switch1'] . PHP_EOL;
 }
 
 
+if ($takeAction){
+    $file = fopen($filename, 'w');
 
-$file = fopen($filename, 'w');
-
-foreach ($states as $index => $state){
-    fwrite($file, $state);
+    foreach ($states as $index => $state){
+        fwrite($file, $state);
+    }
+    fclose($file);
 }
-fclose($file);
+
+
 
 ?>

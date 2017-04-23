@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfefc2b3-6dce-4ee7-b1d3-8f2fbe1b6925" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkSettings.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/createfiles.php" afterPath="$PROJECT_DIR$/createfiles.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homeauto.php" afterPath="$PROJECT_DIR$/homeauto.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,11 +14,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="339" column="24" lean-forward="false" selection-start-line="339" selection-start-column="24" selection-end-line="339" selection-end-column="24" />
+            <state relative-caret-position="135">
+              <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -38,6 +34,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="homeauto.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/homeauto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-153">
+              <caret line="19" column="52" lean-forward="false" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="settings.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -48,21 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createfiles.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/createfiles.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="checkSettings.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkSettings.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -133,6 +129,7 @@
         <option value="$PROJECT_DIR$/createfiles.php" />
         <option value="$PROJECT_DIR$/settings.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/homeauto.php" />
       </list>
     </option>
   </component>
@@ -284,12 +281,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1492849473285</updated>
-      <workItem from="1492849475795" duration="28998000" />
+      <workItem from="1492849475795" duration="30515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28998000" />
+    <option name="totallyTimeSpent" value="30515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -407,14 +404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homeauto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/checkState.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -439,18 +428,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkSettings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="339" column="24" lean-forward="false" selection-start-line="339" selection-start-column="24" selection-end-line="339" selection-end-column="24" />
+        <state relative-caret-position="135">
+          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -462,6 +443,22 @@
             <marker date="1492943349000" expanded="true" signature="5154:5165" ph="..." />
             <marker date="1492943349000" expanded="true" signature="5281:5292" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkSettings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homeauto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="19" column="52" lean-forward="false" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
