@@ -17,7 +17,7 @@ foreach($states_data as $state)
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Simple Home Control</title>
     <!-- Bootstrap -->
-    <link rel="shortcut icon" href="favicon.ico?v=1" type="image/x-icon">
+    <link rel="shortcut icon" href="newfavicon.ico?v=1" type="image/x-icon">
     <?php include ('stylesheets.php'); ?>
 
 </head>
