@@ -23,7 +23,7 @@ if (isset($_GET['client'])){
 }
 
 $filename = 'gs://simplehomecontrolauto.appspot.com/state.txt';
-$filename = 'state.txt';
+//$filename = 'state.txt';
 $states = array();
 
 $states_data=file($filename);
