@@ -11,6 +11,7 @@ foreach($states_data as $state)
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="google-site-verification" content="ECopoOsFhxCMhjGK1CfiiJ7NLTeewVK4xSv_WSRGQpg" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
