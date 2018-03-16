@@ -67,6 +67,8 @@ if ($takeAction){
     fclose($file);
 }
 
+$response = ["success" => "true", "action" => $takeAction];
 
+echo json_encode($response);
 
 ?>
