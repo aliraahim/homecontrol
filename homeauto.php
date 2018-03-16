@@ -12,6 +12,8 @@ $googleHome = substr($settings[0], strpos($settings[0], "-") + 1);
 $sms = substr($settings[1], strpos($settings[1], "-") + 1);
 
 $takeAction = true;
+$switch = false;
+$action = false;
 
 if (isset($_GET['client'])){
     $client =  $_GET['client'];
@@ -33,14 +35,18 @@ foreach($states_data as $state)
 }
 
 if (isset($_GET['switch1'])){
+    $switch = "switch1";
     $command =  $_GET['switch1'];
     if ($command != 'toggle'){
+        $action = $_GET['switch1'];
         $states[0] = $_GET['switch1'];
     }
     elseif ($command == 'toggle') {
         if ($states[0] == "on"){
+            $action = off;
             $states[0] = "off";
         } else {
+            $action = on;
             $states[0] = "on";
         }
     }
@@ -67,7 +73,7 @@ if ($takeAction){
     fclose($file);
 }
 
-$response = ["success" => "true", "action" => $takeAction];
+$response = ["success" => "true", "switch" => $switch, "action" => $action];
 
 echo json_encode($response);
 
