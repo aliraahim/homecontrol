@@ -20,3 +20,23 @@ handlers:
 
 - url: /.*
   script: index.php
+  
+env_variables:
+  # Replace project, instance, database, user and password with the values obtained
+  # when configuring your Cloud SQL instance.
+  MYSQL_DSN: mysql:unix_socket=/cloudsql/spendingtrackerpro:europe-west1:spendingtracker;dbname=spending
+  MYSQL_USER: root
+  MYSQL_PASSWORD: xs5lG1tHBjqIAdek
+  MYSQL_LOCAL_DSN: mysql:host=127.0.0.1;dbname=spending
+  MYSQL_LOCAL_USER: root
+  MYSQL_LOCAL_PASSWORD: confidential
+  DB_HOST: 35.189.232.19
+  DB_NAME: simplehomecontrol
+  DB_USER: root
+  DB_PASSWORD: xs5lG1tHBjqIAdek
+  DB_ENCODING: utf8
+  DB_HOST_LOCAL: 127.0.0.1
+  DB_NAME_LOCAL: spending
+  DB_USER_LOCAL: root
+  DB_PASSWORD_LOCAL: confidential
+  DB_ENCODING_LOCAL: utf8

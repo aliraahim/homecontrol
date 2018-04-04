@@ -16,4 +16,28 @@ if (!(getenv("amazon")))
     DB::$dbName = 'HomeAuto';
 }
 
+$debug = false;
+
+if ($debug) {
+    if (strpos(getenv('SERVER_SOFTWARE'), 'Development') === 0) {
+        DB::$user = getenv('DB_USER_LOCAL');
+        DB::$password = getenv('DB_PASSWORD_LOCAL');
+        DB::$dbName = getenv('DB_NAME_LOCAL');
+        DB::$host = getenv('DB_HOST_LOCAL'); //defaults to localhost if omitted
+        DB::$encoding = getenv('DB_ENCODING_LOCAL'); // defaults to latin1 if omitted
+    } else {
+        DB::$user = getenv('DB_USER');
+        DB::$password = getenv('DB_PASSWORD');
+        DB::$dbName = getenv('DB_NAME');
+        DB::$host = getenv('DB_HOST'); //defaults to localhost if omitted
+        DB::$encoding = getenv('DB_ENCODING'); // defaults to latin1 if omitted
+    }
+} else {
+    DB::$user = getenv('DB_USER');
+    DB::$password = getenv('DB_PASSWORD');
+    DB::$dbName = getenv('DB_NAME');
+    DB::$host = getenv('DB_HOST'); //defaults to localhost if omitted
+    DB::$encoding = getenv('DB_ENCODING'); // defaults to latin1 if omitted
+}
+
 ?>
