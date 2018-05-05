@@ -329,13 +329,13 @@ i.checking {
 .cardTitle p {
     padding: 10px 15px;
     text-align: left;
-    font-size: 24px;
+    font-size: 18px;
     background: #007bff;
     color: white;
 }
 
 .icon {
-    font-size:36px;float: right;
+    font-size:24px;float: right;
 }
 
 .secondary-heading {
