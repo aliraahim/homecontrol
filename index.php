@@ -1,7 +1,11 @@
 <?php
 $debug=true;
-$filename = 'gs://simplehomecontrolauto.appspot.com/state.txt';
-//$filename = 'state.txt';
+if (strpos($_SERVER['SERVER_NAME'], 'localhost') === 0) {
+    $filename = 'state.txt';
+} else {
+    $filename = 'gs://simplehomecontrolauto.appspot.com/state.txt';
+}
+
 $states = array();
 $states_data=file($filename);
 foreach($states_data as $state)
@@ -20,6 +24,7 @@ foreach($states_data as $state)
     <title>Simple Home Control</title>
     <!-- Bootstrap -->
     <link rel="shortcut icon" href="newfavicon.ico?v=1" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
     <?php include ('stylesheets.php'); ?>
 
 </head>
@@ -97,14 +102,31 @@ foreach($states_data as $state)
     </div>
 </div>
 <div class="container">
-    <div class ="row">
+        <div class="row">
+        <div class="col-xs-4 col-sm-offset-3 col-sm-2 what-is">
+        <span class ="link">What is this?</span>
+       
+        </div>
+        <div class="col-xs-4 col-sm-2 logo">
+        <img class = "img-fluid" src = "assets/e-logo.png"/>
+        
+        </div>
+        <div class="col-xs-4 col-sm-2 built-by">
+        <span>Built by Raahim</span>
+        </div>
+    </div>
+                
+                
+        </div>
+<div class="container">
+    <!-- <div class ="row">
         <div class ="col-sm-12">
             <div class = "logo">
                 <img src = "assets/logo.png">
             </div>
 
         </div>
-    </div>
+    </div> -->
     <div class="row toprow">
         <!--<div class="col-xs-6 col-lg-offset-2 col-lg-4 mycard">-->
         <!--http://shoelace.io/#830fe4793d41c811597b2576c0abfedf-->
@@ -133,38 +155,46 @@ foreach($states_data as $state)
         <!--<div class="col-xs-6 col-lg-4 mycard">-->
     </div>
     <div class="row">
+        <div class = "col-sm-offset-3 col-sm-6">
+            <p class = "secondary-heading">Settings</p>
+                </div>
+                </div>
+
+    <div class="row">
         <!--<div class="col-xs-6 col-lg-offset-2 col-lg-4 mycard">-->
-        <div class="col-xs-6 col-sm-offset-3 col-sm-3 cardColumn">
+        <div class="col-xs-6 col-sm-offset-3 col-sm-3 cardColumn timerCardColumn">
             <div class ="card timerCard" onclick="openTimer()">
-                <div class ="cardImage">
+                <!-- <div class ="cardImage">
                     <img src="assets/timer.png">
+                </div> -->
+                <div class="cardTitle">
+    <p>Timer<i class="fa fa-angle-right icon"></i></p>
                 </div>
                 <div class="container">
-                    <h4><b>Timer</b></h4>
+                    <!-- <h4><b>Timer</b></h4> -->
                     <p>Auto on/off.</p>
                 </div>
             </div>
 
         </div>
         <!--<div class="col-xs-6 col-lg-4 mycard">-->
-        <div class="col-xs-6 col-sm-3 cardColumn" style ="margin-bottom:30px">
+        <div class="col-xs-6 col-sm-3 cardColumn settingsCardColumn" style ="margin-bottom:30px">
                 <div class ="card settingsCard" onclick="openSettings()">
-                    <div class ="cardImage">
+                    <!-- <div class ="cardImage">
                         <img src="assets/settings.png">
-                    </div>
+                    </div> -->
+                    <div class="cardTitle">
+    <p>Integrations<i class="fa fa-angle-right icon"></i></p>
+                </div>
                     <div class="container">
-                        <h4><b>Settings</b></h4>
-                        <p>Tap to modify.</p>
+                        <!-- <h4><b>Integrations</b></h4> -->
+                        <p>SMS & Google Home</p>
                     </div>
                 </div>
 
         </div>
     </div>
-    <div class ="row">
-        <div class ="col-sm-12">
-            <p style ="text-align:center; color:white; ">Built by Raahim</p>
-        </div>
-    </div>
+    
 </div>
 <?php include('javascript.php'); ?>
 <script>
@@ -192,7 +222,7 @@ foreach($states_data as $state)
     function timerButtonRestore() {
         var text = "Set timer";
         $('.timer-btn').text(text);
-        $('.timer-btn').css('background-color','#337ab7');
+        $('.timer-btn').css('background-color','#007bff');
         $('.timer-btn').css('cursor','auto');
         $('.timer-btn').disabled = '';
         $('#new_state').val('off');

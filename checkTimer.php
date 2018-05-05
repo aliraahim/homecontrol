@@ -5,8 +5,11 @@
  * Date: 4/22/17
  * Time: 7:39 PM
  */
-
-$filename = 'gs://simplehomecontrolauto.appspot.com/schedule.txt';
+if (strpos($_SERVER['SERVER_NAME'], 'localhost') === 0) {
+    $filename = 'schedule.txt';
+} else {
+    $filename = 'gs://simplehomecontrolauto.appspot.com/schedule.txt';
+}
 $new_states = array();
 $new_states_data=file($filename);
 foreach($new_states_data as $new_state)

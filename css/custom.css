@@ -76,7 +76,9 @@ i.right {
 /*}*/
 
 .cards {
-    background-color:cadetblue;
+    /* background-color:cadetblue; */
+    background-color: rgb(239,239,233);
+    padding-top:30px;
 }
 
 .card {
@@ -146,7 +148,9 @@ i.right {
 
 .card {
     /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    /* box-shadow: 0 1px 2px 0 rgba(0,0,0,0.20), 0 1px 3px 0 rgba(0,0,0,0.10); */
+    border: solid 1px rgb(223,226,229);
     transition: 0.3s;
     background-color:white;
     /*margin-left:20px;*/
@@ -155,7 +159,9 @@ i.right {
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
+    /* 2: */
+/* box-shadow: 0 3px 6px 0 rgba(0,0,0,0.23), 0 3px 6px 0 rgba(0,0,0,0.16); */
 }
 
 .switch {
@@ -187,9 +193,13 @@ i.right {
     text-align:center;
 }
 
-.timer-btn {
+.timer-btn, 
+.timer-btn:hover,
+.timer-btn:focus,
+.timer-btn:active {
     font-size:30px;
-    background-color:#337ab7;
+    /* background-color:#337ab7; */
+    background-color:#007bff;
 }
 
 span.healthInfo{
@@ -210,6 +220,7 @@ span.healthInfo{
 body
 {
     overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 span.timerInfo{
@@ -231,6 +242,10 @@ span.timerInfo{
 .logo {
     text-align:center;
     margin-bottom:10px;
+}
+
+.logo img {
+    width:55px;
 }
 
 span.guide{
@@ -255,7 +270,18 @@ i.checking {
 }
 
 .timerCard, .settingsCard {
-    background-color:gainsboro;
+    /* background-color:gainsboro; */
+    background-color:white;
+    cursor: pointer;
+
+}
+
+.timerCardColumn {
+    padding-right:0px;
+}
+
+.settingsCardColumn {
+    padding-left:0px;
 }
 
 .settingsLabel {
@@ -267,4 +293,52 @@ i.checking {
 
 .settingsInput{
     text-align:right;
+}
+
+.built-by {
+    padding-left:0px;
+}
+
+.built-by span{
+    text-align:right;
+    float: right;
+    font-size: 12px;
+    color: #586069;
+    font-weight: 300;
+    
+}
+
+.built-by, .what-is {
+    padding-top:25px;
+}
+
+.link {
+    text-decoration: none;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+    color: #F17105;
+    padding-bottom: 0.1rem;
+    cursor: pointer;
+}
+
+.what-is span {
+    float: left;
+    font-size: 12px;
+}
+
+.cardTitle p {
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 24px;
+    background: #007bff;
+    color: white;
+}
+
+.icon {
+    font-size:36px;float: right;
+}
+
+.secondary-heading {
+    /* color:gray; */
+    font-weight:300;
 }
