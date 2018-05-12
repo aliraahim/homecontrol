@@ -23,7 +23,7 @@ foreach($states_data as $state)
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Simple Home Control</title>
     <!-- Bootstrap -->
-    <link rel="shortcut icon" href="newfavicon.ico?v=1" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico?v=1" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
     <?php include ('stylesheets.php'); ?>
 
@@ -370,6 +370,15 @@ foreach($states_data as $state)
         checkHealth();
         checkTimer();
         checkSettings();
+
+        $( ".what-is span" ).on( "click", function() {
+                swal({
+  title: "What is this, you ask?",
+  text: "This is my very own IoT (Internet of Things) project. This website (and the bulb you see on it) is connected to a physical electric switch (via an intermediary microprocessor) in my room which allows me to turn the switch on/off over the internet. Additionally, I've also built support for controlling the switch through Google Home, SMS and through a timer. I will soon upload a video showing the software-hardware interface in action!",
+  customClass: "what-is-alert",
+  button: "Got it!",
+});
+});
 
         $("#googleHome").change(function() {
             var setting;

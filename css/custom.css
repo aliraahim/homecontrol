@@ -342,3 +342,11 @@ i.checking {
     /* color:gray; */
     font-weight:300;
 }
+
+.swal2-modal .swal2-content {
+    text-align:left;
+}
+
+.btn-primary, .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+    background: #007bff;
+}
